@@ -1,0 +1,77 @@
+html, body{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+  margin: 0;
+}
+.grass, .sky, .road{
+  position: relative;
+}
+.cloud{
+  position: absolute;
+}
+.cloud:nth-child(1){
+  width: 200px;
+  top: 120px;
+  opacity: 0.5;
+  animation: wind 3s linear infinite reverse;
+}
+.cloud:nth-child(2){
+  width: 300px;
+  top: 8px;
+  animation: wind 4s linear infinite reverse;
+}
+.sky{
+  height: 40%;
+  background: skyblue;
+}
+.grass{
+  height: 30%;
+  background-image: url("img/flowers.jpg");
+  background-size: contain;
+}
+.road{
+  height: 30%;
+  background: dimgrey;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+.lines{
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+.car {
+  position: absolute;
+  top: -80px;
+  left: -500px;
+  animation-name: drive;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+.car2 {
+  position: absolute;
+  top: 30px;
+  left: -500px;
+  animation-name: drive;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes drive{
+  from{transform: translateX(0);}
+  to{transform: translateX(2500px);}
+}
+@keyframes wind{
+  from{left: -300px;}
+  to{left: 100%;}
+}
+
+
+
+
+
